@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+    <table>
+        <!--한개 행 tr
+        한개 열 th, td-->
+        <tr>
+            <th scope="col">지역구분</th>
+            <th scope="col" colspan="2">지역명</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">서울</td>
+            <td>강남</td>
+            <td>서초</td>
+        </tr>
+
+        <tr>
+            <td>잠실</td>
+            <td>송파</td>
+        </tr>
+        
+        <tr>
+            <td rowspan="2">천안</td>
+            <td>봉명</td>
+            <td>쌍용</td>
+        </tr>
+
+        <tr>
+            <td>신부</td>
+            <td>두정</td>
+        </tr>
+    </table>
+</body>
+</html>

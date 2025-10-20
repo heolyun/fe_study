@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>고객명 : <input type="text"></label><br>
+        <label>전화번호 : <input type="tel"></label><br>
+        <label>E-mail : <input type="email"></label>
+    <p>
+        <label for="selectpz">피자선택:</label>
+        <select>
+        <option>치즈피자</option>
+        <option>페페로니피자</option>
+        <option>콤비네이션피자</option>
+        <option selected>피자를 선택하세요</option>
+        </select>
+    </p>
+    <p>
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <label>
+            <input type="radio" name="pzSize">Samll</label><br>
+            <label><input type="radio" name="pzSize">Medium</label><br>
+            <label><input type="radio" name="pzSize">Large</label><br>
+        </label>
+    </p>
+    </fieldset>
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <label>
+            <input type="checkbox" name="pzplus">베이컨</label><br>
+            <label><input type="checkbox" name="pzplus">치즈</label><br>
+            <label><input type="checkbox" name="pzplus">양파</label><br>
+            <label><input type="checkbox" name="pzplus">버섯</label><br>
+        </label>
+    </p>
+    </fieldset>
+
+    <label>희망배송시간 : <input type="time"></label>
+    <p>
+    <label>배송시 요청사항: <input type="text"></label>
+    </p>
+    </form>
+</body>
+</html>

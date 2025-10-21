@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*구조적 가상 클래스 선택자*/
+
+        /* p:first-child{color: red;}
+
+        p:last-child{color:blue;} */
+
+        /* p:nth-child(3){color: green;}  정확하게 맞아야함*/
+        /* p:nth-of-type(3){color: green;} 일반적으로 우리가 생각한것 */
+
+        p:nth-of-type(odd){color: green;}
+        p:nth-of-type(even){color: blue;}
+    </style>
+</head>
+<body>
+    <div>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+
+    <div>
+        <p>p1</p>
+        <span>p2</span>
+        <p>p3</p>
+        <span>p4</span>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+
+    <div>
+        <p>p1</p>
+        <span>p2</span>
+        <span>p4</span>
+        <p>p3</p>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+</body>
+</html>

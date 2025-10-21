@@ -4,58 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        table, th, td {
-        border:1px solid black;
-        border-collapse: collapse;
-}
-</style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td rowspan="2">식당명</td>
-            <td colspan="2">영업시간</td>
-            <td rowspan="2">메뉴</td>
-        </tr>
+    <form>
+        <label>사용자 ID : <input type="text"></label><br>
+        <label>비밀 번호  : <input type="password" ></label> <input type="button" value="완료">
+        <br><br>
+        <select>
+        <option>짜장면</option>
+        <option selected>짬뽕</option>
+        <option>탕수육</option>
+        </select>
+        <br>
+            <label><input type="checkbox" >짜장면</label>
+            <label><input type="checkbox"checked >짬뽕</label>
+            <label><input type="checkbox" >탕수육</label>
+        </label>
+        <br>
+        <label>이름: <input type="text"></label><br>
+        <label>암호  : <input type="password" ></label><br>
+        <label>자소서: <textarea rows="5" placeholder="이곳에 자기소개서 작성"></textarea></label><br><br>
+        <label>검색  : <input type="text"></label>
+        <input type="button"value="Q1">
+        <input type="button"value="Q2"><br>
 
-        <tr>
-            <td>시작시간</td>
-            <td>종료시간</td>
-        </tr>
-
-        <tr>
-            <td rowspan="2">달식당</td>
-            <td rowspan="2">10:00</td>
-            <td rowspan="2">21:00</td>
-            <td>돈까스</td>
-        </tr>
+        <label>submit 버튼 : <input type="submit" value="전송1"> <input type="submit" value="전송2"> </label><br>
+        <label>reset 버튼 : <input type="reset" value="리셋1"> <input type="reset" value="리셋2"> </label>
         
-        <tr>
-            <td>김밥</td>
-        </tr>
 
-        <tr>
-            <td rowspan="2">맘스터치</td>
-            <td rowspan="2">11:00</td>
-            <td rowspan="2">18:00</td>
-            <td>햄버거</td>
-        </tr>
-        
-        <tr>
-            <td>치킨</td>
-        </tr>
+    </form>
 
-        <tr>
-            <td rowspan="2">김밥나라</td>
-            <td rowspan="2">8:00</td>
-            <td rowspan="2">20:00</td>
-            <td>떡볶이</td>
-        </tr>
-        
-        <tr>
-            <td>비빔밥</td>
-        </tr>
-    </table>
+    
 </body>
 </html>

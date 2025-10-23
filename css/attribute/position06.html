@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 200px;
+            background-color: lightgray;
+            position: relative;
+        }
+
+        .menu {
+            height: 50px;
+            text-align: center;
+        }
+
+        .submenu {
+            background-color: aquamarine;
+            position: absolute;
+            top:50px;
+            left:0;
+            width:100%; /* 부모요소 크기 대비 상대 % */
+            /* Ctrl+/
+            /* Alt+Shift+A */
+            display: none;
+        }
+        
+        .item {
+            height: 50px;
+        }
+
+        /* .menu:hover ~ .submenu {
+            display:block; 
+        } */
+
+        .container:hover .submenu{
+            display:block; 
+        }
+
+        .item:hover {
+            background-color: burlywood;
+            color:blue;
+            text-decoration: underline;
+            cursor:pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="menu">Menu</div>
+        <div class="submenu">
+            <div class="item">submenu item1</div>
+            <div class="item">submenu item2</div>
+            <div class="item">submenu item3</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

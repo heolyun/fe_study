@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .back-lightgray {
+            background-color: lightgray;
+        }
+
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 
+            case 1 각자 위치 잡기 
+            relative
+        */
+        /* .container {
+            width:500px;
+            height:300px;
+            border: 5px solid black;
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+
+        .red-box {
+            background-color: red;
+            position: relative;
+            left:55px;
+            top: -245px;
+        }
+
+        .green-box {
+            background-color: green;
+            position:relative;
+            left:105px;
+            top:-295px;
+            z-index: 10;
+        }
+
+        .yellow-box {
+            background-color: yellow;
+            position:relative;
+            left:55px;
+            top:-345px;
+        } */
+
+
+        /*
+            case 2 각자 위치 잡기 
+            fixed
+        */
+
+        /* .container {
+            width:500px;
+            height:300px;
+            border: 5px solid black;
+            position: fixed;
+            left: 50px;
+            top: 100px;
+        }
+
+        .red-box {
+            background-color: red;
+            position: fixed;
+            left:55px;
+            top: 105px;
+        }
+
+        .green-box {
+            background-color: green;
+            position:fixed;
+            left:105px;
+            top:155px;
+            z-index: 10;
+        }
+
+        .yellow-box {
+            background-color: yellow;
+            position:fixed;
+            left:55px;
+            top:205px;
+        } */
+
+        /* case 3 내부에 포함 */
+        /* .container {
+            width:500px;
+            height:300px;
+            border: 5px solid black;
+            margin:50px;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        .red-box {
+            background-color: red;
+            position: relative;
+        }
+
+        .green-box {
+            background-color: green;
+            position:relative;
+            left:50px;
+            top:-50px;
+            z-index: 10;
+        }
+
+        .yellow-box {
+            background-color: yellow;
+            position:relative;
+            top:-100px;
+        }  */
+
+
+        /* case 4 내부에포함 + absolute */
+        .container {
+            width:500px;
+            height:300px;
+            border: 5px solid black;
+            /* margin:50px; */
+            margin-left: 50px;
+            margin-top: 50px;
+            /* left:50px;
+            top:50px; */
+            position: relative;
+        }
+
+        .red-box {
+            background-color: red;
+        }
+
+        .green-box {
+            background-color: green;
+            position:absolute;
+            left:50px;
+            top:50px;
+            z-index: 10;
+        }
+
+        .yellow-box {
+            background-color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="back-lightgray">
+        <h3>배경색이 lightgray</h3>
+        <h3>h3글자</h3>
+    </div>
+    
+    <!-- case1, 2 -->
+<!--     <div class="container"></div>
+    <div class="box red-box">A</div>
+    <div class="box green-box">B</div>
+    <div class="box yellow-box">C</div> -->
+
+    <!-- case 3, 4 -->
+    <div class="container">
+        <div class="box red-box">A</div>
+        <div class="box green-box">B</div>
+        <div class="box yellow-box">C</div>
+    </div>
+    
+   <!--  <div>
+        하단에 뭔가 다음에 추가가 될 내용
+    </div> -->
+
+</body>
+</html>

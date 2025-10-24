@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 500px;
+            margin:0 auto;
+            margin-top:50px;
+        }
+
+        /* inline-block 방식 */
+        /* .red-box {
+            width: 250px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        .green-box {
+            width: 50%;
+            height: 100px;
+            background-color: green;
+            display: inline-block;
+        }
+
+        .main {
+            text-align: center;
+            background-color: white;
+        }
+
+        .blue-box {
+            width:500px;
+            height: 200px;
+            background-color: blue;
+        } */
+
+
+        /* float 방식 */ 
+        .red-box {
+            width: 250px;
+            height: 100px;
+            background-color: red;
+            float:left;
+        }
+
+        .green-box {
+            width: 50%;
+            height: 100px;
+            background-color: green;
+            float:left;
+        }
+
+        .main {
+            text-align: center;
+            /* background-color: white; */
+            width:100%;
+            float:left;
+        }
+
+        .blue-box {
+            width:500px;
+            height: 200px;
+            background-color: blue;
+            float:left;
+        }
+
+
+        /* float 사용시 clear */
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="red-box">
+        </div><div class="green-box"></div>
+        <div class="main">글자가운데정렬</div>
+        <div class="blue-box"></div>
+    </div>
+
+</body>
+</html>

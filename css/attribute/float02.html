@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .box { width:200px; height:200px; }
+
+        .black-box {
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .red-box { 
+            background-color: red; 
+            float: left;
+        }
+
+        .green-box { 
+            background-color: green; 
+            float: left;
+        }
+
+        .blue-box { 
+            background-color: blue; 
+            float: left;
+        }
+
+        .next { background-color: gray; }
+
+        .clear-box { clear: both; }
+
+        .container::after {
+            content: ""; /* content 가 없으면 작동을 안해서 필수로 넣기 */
+            display: block; /* content 기본 텍스트 inline -> block 변경 */
+            clear: both; /* float clear 처리 */
+        }
+
+        /*
+            float(공중에뜸)로 공간/위치 인식이 안될때 해결방법
+
+            1. 그 크기만큼 차지하는 임의의 요소 추가
+                (공간차지용)
+            2. clear 속성 활용
+                1) float 가 적용된 요소들 중 가장 끝 요소의 다음 요소에 적용
+                2) 가상요소 선택자 clear 
+        */
+
+    </style>
+</head>
+<body>
+    <!-- <br> &nbsp; -->
+    <div class="box black-box">        
+    </div><div class="box black-box"> 
+    </div><div class="box black-box"></div>
+
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+        <!-- <div class="clear-box"></div> -->
+    </div>
+    <!-- <div class="box"></div> -->
+    <div class="box next"></div>
+
+
+<!--     부모크기를 고정 -> 자식은 부모크기 무시 넘쳐~~
+    <div style="background-color: lightblue;">
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>        
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>        
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla animi perferendis facere, qui cumque dolore doloremque itaque, mollitia voluptatem quia explicabo distinctio unde obcaecati ducimus sequi, nesciunt similique laboriosam aperiam.</span>        
+    </div>
+
+    부모크기 고정X <- 자식크기
+    내가 담고있는 자식 크기만큼~이 부모크기
+ -->
+
+</body>
+</html>

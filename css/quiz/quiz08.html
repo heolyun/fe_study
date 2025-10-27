@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            position:relative;
+        }
+
+        .box1 {
+            animation-name: ani1;  
+        }
+
+        .box2 {
+            animation-name: ani2;
+        }
+
+        .box3 {
+            animation-name: ani3;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes ani1 {
+            0% {
+                background-color: blue;
+                left:0px;
+            }
+
+            50% {
+                background-color: orange;
+                left:100px;
+            }
+
+            100% {
+                background-color: pink;
+                left:200px;
+            }
+        }
+
+        @keyframes ani2 {
+            0% {
+                background-color: blue;
+                top:0px;
+                /* margin-top: 20px; */
+            }
+
+            50% {
+                background-color: orange;
+                top:100px;
+                /* margin-top: 120px; */
+            }
+
+            100% {
+                background-color: pink;
+                top:200px;
+                /* margin-top: 220px; */
+            }
+        }
+
+        @keyframes ani3 {
+            0% {
+                background-color: blue;
+                left:0px;
+                top:0px;
+            }
+
+            50% {
+                background-color: orange;
+                left:100px;
+                top:100px;
+            }
+
+            100% {
+                background-color: pink;
+                left:200px;
+                top:200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+
+</body>
+
+</html>

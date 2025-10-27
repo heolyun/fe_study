@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" box="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: repeat(18, 25px);
+            grid-template-columns: repeat(8, 100px);
+            grid-template-areas:
+                "box1 box1 box1 box1 box2 box2 box2 box2 "
+                "box1 box1 box1 box1 box2 box2 box2 box2 "
+                "box1 box1 box1 box1 box2 box2 box2 box2 "
+
+                "box3 box3 box3 box3 box3 box3 box3 box3"
+                "box3 box3 box3 box3 box3 box3 box3 box3 "
+                "box3 box3 box3 box3 box3 box3 box3 box3 "
+
+                "box4 box4 box4 box5 box5 box5 box5 box5 "
+                "box4 box4 box4 box5 box5 box5 box5 box5 "
+                "box4 box4 box4 box5 box5 box5 box5 box5 "
+                "box4 box4 box4 box5 box5 box5 box5 box5 "
+                "box4 box4 box4 box6 box6 box6 box6 box6 "
+                "box4 box4 box4 box6 box6 box6 box6 box6 "
+                "box4 box4 box4 box6 box6 box6 box6 box6 "
+                "box4 box4 box4 box6 box6 box6 box6 box6 "
+
+                "box7 box7 box8 box8 box9 box9 box10 box10 "
+                "box7 box7 box8 box8 box9 box9 box10 box10 "
+                "box7 box7 box8 box8 box9 box9 box10 box10 "
+                "box7 box7 box8 box8 box9 box9 box10 box10 "
+                "box7 box7 box8 box8 box9 box9 box10 box10 "
+            ;
+        }
+
+        #box1 {
+            background-color: yellow;
+            grid-area: box1;
+            border: 1px solid black;
+        }
+
+        #box2 {
+            background-color: gray;
+            grid-area: box2;
+            border: 1px solid black;
+        }
+
+        #box3 {
+            background-color: purple;
+            grid-area: box3;
+            border: 1px solid black;
+        }
+
+        #box4 {
+            background-color: blue;
+            grid-area: box4;
+            border: 1px solid black;
+        }
+
+        #box5 {
+            background-color: yellow;
+            grid-area: box5;
+            border: 1px solid black;
+        }
+
+        #box6 {
+            background-color: pink;
+            grid-area: box6;
+            border: 1px solid black;
+        }
+
+        #box7 {
+            background-color: yellow;
+            grid-area: box7;
+            border: 1px solid black;
+        }
+
+        #box8 {
+            background-color: orange;
+            grid-area: box8;
+            border: 1px solid black;
+        }
+
+        #box9 {
+            background-color: yellow;
+            grid-area: box9;
+            border: 1px solid black;
+        }
+
+        #box10 {
+            background-color: green;
+            grid-area: box10;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+        <div id="box7"></div>
+        <div id="box8"></div>
+        <div id="box9"></div>
+        <div id="box10"></div>
+    </div>
+</body>
+
+</html>

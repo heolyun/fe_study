@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top {
+            display: flex;
+            width: 700px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .main {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .space {
+            width: 450px;
+            height: 100px;
+        }
+
+        .mypage {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .middle {
+            display: flex;
+            width: 700px;
+            height: 300px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .midleft {
+            width: 70%;
+            height: 300px;
+            background-color: orange;
+            display: flex;
+
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+
+
+        .midright {
+            width: 30%;
+            height: 300px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer {
+            display: flex;
+            width: 700px;
+            height: 100px;
+            background-color: blue;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container {
+            margin: 50px auto 0 auto;
+            height: 500px;
+            width: 700px;
+            border: 1px solid black;
+        }
+
+        .box {
+            margin: 15px;
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="main">메인메뉴</div>
+            <div class="space"></div>
+            <div class="mypage">마이페이지</div>
+        </div>
+        <div class="middle">
+            <div class="midleft">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="midright">aisde</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

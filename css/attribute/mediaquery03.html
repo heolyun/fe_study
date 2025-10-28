@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+        }
+        .red {background-color: red;}
+        .blue {background-color: blue;}
+
+        @media screen and (max-width:500px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+    </div>
+
+</body>
+</html>

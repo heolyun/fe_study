@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * :not(body){
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: 1px solid black;
+            border: none;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+
+        .header-left {
+            background-color: yellow;
+            width: 400px;
+            height: 100px;
+        }
+
+        .header-right {
+            background-color: gray;
+            width: 400px;
+            height: 100px;
+        }
+
+        .nav {
+            width: 100%;
+            height: 100px;
+            background-color: purple;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main-left {
+            width: 40%;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        .main-right {
+            width: 60%;
+            background-color: antiquewhite;
+        }
+
+        .main-right-1 {
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .main-right-2 {
+            height: 100px;
+            background-color: orange;
+        }
+
+        .footer-1 {
+            width: 25%;
+            height: 100px;
+            background-color: darkblue;
+        }
+
+        .footer-2 {
+            width: 25%;
+            height: 100px;
+            background-color: darkgreen;
+        }
+
+        .footer-3 {
+            width: 25%;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+
+        .footer-4 {
+            width: 25%;
+            height: 100px;
+            background-color: darkorange;
+        }
+
+        .footer {
+            width: 100%;
+            display: flex;
+        }
+
+        @media screen and (max-width:700px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            .footer {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .footer-1 {
+                width: 50%;
+            }
+
+            .footer-2 {
+                width: 50%;
+            }
+
+            .footer-3 {
+                width: 50%;
+            }
+
+            .footer-4 {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+
+            .container {
+                flex-direction: column;
+                width: 100%;
+                height: 700px;
+            }
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .header-left,
+            .header-right {
+                width: 100%;
+                height: 100px;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .main-left,
+            .main-right {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:350px) {
+
+            .header-left,
+            .header-right,
+            .nav,
+            .main-left,
+            .main-right,
+            .main-right-1,
+            .main-right-2,
+            .footer-1,
+            .footer-2,
+            .footer-3,
+            .footer-4 {
+                width: 100%;
+            }
+
+            .footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="header-left"></div>
+            <div class="header-right"></div>
+        </div>
+
+        <div class="nav"></div>
+
+        <div class="main">
+            <div class="main-left"></div>
+            <div class="main-right">
+                <div class="main-right-1"></div>
+                <div class="main-right-2"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-1"></div>
+            <div class="footer-2"></div>
+            <div class="footer-3"></div>
+            <div class="footer-4"></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

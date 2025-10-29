@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <style>
+        .signup {
+            width: 50%;
+            height: 100%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .login {
+            width: 50%;
+            height: 100%;
+            background-color: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .button {
+            background-color: lightgreen;
+            width: 400px;
+            height: 40px;
+            font-size: large;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="header">
+                <div onclick="location.href='./signup.html'" class="signup">Sign Up</div>
+                <div onclick="location.href='./login.html'" class="login">Log in</div>
+            </div>
+            <h2>Welcome Back!</h2>
+            <input type="email" style="width:400px; height:30px;" placeholder="Email Address *"><br>
+            <input type="password" style="width:400px; height:30px;" placeholder="Set A Password *"><br>
+            <input type="password" style="width:400px; height:30px;" placeholder="Confirm A Password *"><br>
+            <input type="button" class ="button" value="LOG IN" onclick="location.href='webpage.html'">
+        </div>
+    </form>
+</body>
+
+</html>

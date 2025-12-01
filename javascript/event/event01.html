@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width:100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            /* font-size: */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="target">이벤트 등록</h1>
+
+    <button onclick="event1()">이벤트 버튼1</button>
+
+    <button id="btn_evt2">이벤트 버튼2</button>
+
+    <button id="btn_evt3">이벤트 버튼3</button>
+
+    <div id="box">박스div 버튼 대신에</div>
+
+    <script>
+
+        function event1(){
+            console.log('event1() 호출됨');
+            document.getElementById('target').style.color = 'red';
+        }
+
+        function event2(){
+            console.log('event2() 호출됨');
+            document.getElementById('target').style.fontSize = '40px';
+            //let y = 10 - 5;
+        }
+
+        function event3(){
+            console.log('event3() 호출됨');
+        }
+
+        document.getElementById('btn_evt2').onclick = event2;
+
+        const btn_evt3 = document.getElementById('btn_evt3');
+        btn_evt3.addEventListener('click', event3);
+        //                  어떤 이벤트, 실행할 함수
+
+        document.querySelector('#box').addEventListener('click', ()=>{
+            console.log('#box 클릭 이벤트 발생함.');
+            document.querySelector('#box').style.backgroundColor = 'orange';
+        })
+
+        document.querySelector('#box').addEventListener('dblclick', ()=>{
+            console.log('#box 더블 클릭 더블 클릭 발생함.');
+            //document.querySelector('#box').style.backgroundColor = 'orange';
+            //
+            location.href = 'https://netflix.com';  //url 경로 이동
+            // <a href="https://netflix.com">
+        })
+
+
+    </script>
+
+</body>
+</html>

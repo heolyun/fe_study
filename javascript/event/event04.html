@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form> -->
+        <input type="text" id="input_text">
+    <!-- </form> -->
+
+    <script>
+        const input_text = document.getElementById('input_text');
+        
+        input_text.addEventListener('keydown', (eventInfo)=>{
+            console.log('keydown 실행됨');
+            console.log(eventInfo);
+
+            if(eventInfo.keyCode == 13){
+                console.log('keyCode 13 엔터키 눌림');
+            }
+
+            if(eventInfo.key == 'Enter'){
+                console.log('key == Enter 엔터키 눌림');
+            }
+
+            if(eventInfo.key == 'q'){
+                location.href="https://netflix.com";
+            }
+        })
+
+        // deprecated  앞으로 패치중에나..조만간 사라지게 될 수 있음 주의
+        // 사용 자제  keypress   deprecated
+
+        input_text.addEventListener('keyup', ()=>{
+            console.log('keyup 눌려서 실행됨.');
+        })
+
+        input_text.addEventListener('focus', ()=>{
+            console.log('focus 잡혔음.');
+        })
+
+        input_text.addEventListener('blur', ()=>{
+            console.log('blur 포커스 풀림');
+        })
+
+    </script>
+</body>
+</html>

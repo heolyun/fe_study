@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+        }
+
+        #btn1:hover{
+            /* 무슨속성  */
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1" onclick="btn_click()">버튼1</button>
+    
+    <div class="box"></div>
+
+    <script>
+        const btn_click = ()=>{
+            console.log('btn 버튼1 눌림');
+        }
+
+        const btn1 = document.getElementById('btn1');
+        //btn1.onclick = btn_click;
+        btn1.onmouseover = ()=>{
+            console.log('버튼에 마우스가 올라옴');
+        }
+
+        //btn1.onmouseout = 
+        btn1.addEventListener('mouseout', ()=>{
+            console.log('버튼에서 마우스 밖으로 나감');
+        })
+
+        const divBox = document.getElementsByClassName('box')[0];
+
+        divBox.addEventListener('mousemove', ()=>{
+            console.log('마우스가 움직임');
+        })
+        divBox.addEventListener('wheel', ()=>{
+            console.log('마우스 wheel이 움직임');
+        })
+
+        //function ff(event){}
+
+
+        divBox.addEventListener('click', (event)=>{
+            // 매개변수 event -> 마우스 이벤트 정보를 가진 객체
+            console.log(event);
+
+            console.log(event.clientX);
+            console.log(event.clientY);
+            console.log(event.pageX);
+            console.log(event.pageY);
+            console.log(event.screenX);
+            console.log(event.screenY);
+        })
+
+    </script>
+
+</body>
+</html>

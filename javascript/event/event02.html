@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red {
+            color:red;
+        }
+
+        .blue {
+            color:blue;
+        }
+
+        .big-font {
+            font-size:50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <p id="pid">text 아무 p태그 글자~</p>
+
+    <a id="aid" href="https://netflix.com">넷플릭스로 이동하기</a>
+
+    <div id="container">
+        <p>기존에 들어있는 p태그</p>
+    </div>
+
+    <script>
+
+        //클래스 조작
+        //노드(요소).classList.add
+        //노드(요소).classList.remove
+        //노드(요소).classList.toggle
+
+        document.getElementById('pid').classList.add('blue');
+        document.getElementById('pid').classList.add('red');
+
+        document.getElementById('pid').addEventListener('click', ()=>{
+            document.getElementById('pid').classList.toggle('big-font');
+            // toggle  on/off
+        })
+
+        //속성 조작  Attribute
+        //노드(요소).getAttribute
+        //노드(요소).setAttribute
+        //노드(요소).removeAttribute
+
+        console.log(document.getElementById('pid').getAttribute('class'));
+
+        const a_aid = document.getElementById('aid');
+        console.log(a_aid.getAttribute('href'));
+
+        a_aid.setAttribute('href', 'https://tving.com');
+        a_aid.setAttribute('target', '_blank');
+
+        a_aid.removeAttribute('target');
+
+
+
+        //노드 추가
+        const divCon = document.getElementById('container');
+
+        //추가할 노드 생성
+        const newP = document.createElement("p"); //<p></p>
+        const txtNode = document.createTextNode("p태그 내부에 글씨");
+        const attrNode = document.createAttribute("class");
+        attrNode.value = "red";  //  class="red"
+
+        // <p class="red">p태그 내부에 글씨</p>
+
+        //<p></p>
+        newP.appendChild(txtNode);  //p태그에 내부 글씨(노드)추가  <p>p태그 내부에 글씨</p>
+        newP.setAttributeNode(attrNode); //p태그에 속성노드 추가  <p class="red">p태그 내부에 글씨</p>  
+
+        divCon.appendChild(newP);  //divContainer 에 내부에 새로만든 p태그요소 추가
+
+        //노드 추가 생성
+        //순수 Javascript (바닐라 자바스크립트)
+        //jQuery 라이브러리
+        //React 활용 (데이터기반 처리 방식)
+
+        
+        // >Javascript
+        // divCon.innerHTML = '<p class="red">p 내부글씨</p>';
+
+        // >jQuery
+        // $('#container').append('<p class="red">p태그 내부 글씨 Text</p>');
+        //
+        // >React
+        // 생성될 요소에 들어가는 데이터 값
+        // if(... )추가
+        // 반복문 [1,2,3]... 화면에 요소 추가
+
+
+    </script>
+
+
+
+</body>
+</html>

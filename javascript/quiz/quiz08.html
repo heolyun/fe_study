@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+
+            position: relative;
+
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        .ani1:hover,
+        .ani2:hover,
+        .ani3:hover {
+            animation-play-state: paused;
+        }
+
+        .ani1 {
+            animation-name: animation1;
+        }
+
+        .ani2 {
+            animation-name: animation2;
+
+        }
+
+        .ani3 {
+            animation-name: animation3;
+        }
+
+        @keyframes animation1 {
+            0% {
+                background-color: blue;
+                left: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                left: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                left: 200px;
+            }
+        }
+
+        @keyframes animation2 {
+            0% {
+                background-color: blue;
+                top: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+            }
+        }
+
+        @keyframes animation3 {
+            0% {
+                background-color: blue;
+                top: 0px;
+                left: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px;
+                left: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+
+        .stop-box {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="play()">재생</button>
+    <button onclick="stop()">정지</button>
+
+    <div class="box ani1"></div>
+    <div class="box ani2"></div>
+    <div class="box ani3"></div>
+    <script>
+        function stop() {
+            const style = document.createElement('style');
+            style.innerHTML = `.box { animation-play-state: paused; }`;
+            document.head.appendChild(style);
+        }
+
+        function play() {
+            const style = document.createElement('style');
+            style.innerHTML = `.box { animation-play-state: running; }`;
+            document.head.appendChild(style);
+        }
+    </script>
+</body>
+
+</html>

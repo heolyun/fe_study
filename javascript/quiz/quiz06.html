@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>달식당</span>
+    <span id="clickText">좋아요♥</span>
+    <span id="count">0</span>
+
+    <script>
+        let count = 0;
+
+        const clickText = document.getElementById('clickText');
+        const countDisplay = document.getElementById('count');
+
+        clickText.addEventListener('click', () => {
+            count++; 
+            countDisplay.textContent = count;
+        });
+    </script>
+
+
+
+</body>
+
+</html>

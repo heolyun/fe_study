@@ -100,31 +100,62 @@
 
 
         .stop-box {
+            width: 100px;
+            height: 50px;
             background-color: lightgray;
         }
+
+        .stop-box:hover~.box {
+            animation-play-state: paused;
+        }
+
+        .stopAnimation {
+            animation-play-state: paused;
+        }
+
+        .playAnimation {
+            animation-play-state: running;
+        }
+
     </style>
 </head>
 
 <body>
-    <button onclick="play()">재생</button>
-    <button onclick="stop()">정지</button>
+    <!-- <div class="stop-box">멈추기</div> -->
+    <button onclick="playAni()">재생</button>
+    <button id="btn_stop">정지</button>
 
     <div class="box ani1"></div>
     <div class="box ani2"></div>
     <div class="box ani3"></div>
+
     <script>
-        
-        function stop() {
-            const style = document.createElement('style');
-            style.innerHTML = `.box { animation-play-state: paused; }`;
-            document.head.appendChild(style);
+        //재생버튼 
+        function playAni(){
+            let boxes = document.querySelectorAll('.box');
+
+            for(let i=0; i<boxes.length; i++){
+                boxes[i].classList.remove('stopAnimation');
+            }
         }
 
-        function play() {
-            const style = document.createElement('style');
-            style.innerHTML = `.box { animation-play-state: running; }`;
-            document.head.appendChild(style);
-        }
+        //정지버튼
+        document.getElementById('btn_stop').addEventListener('click', ()=>{
+            //document.querySelector('.ani1').style.animationPlayState = 'paused';
+            /* document.querySelector('.ani1').classList.add('stopAnimation');
+            document.querySelector('.ani2').classList.add('stopAnimation');
+            document.querySelector('.ani3').classList.add('stopAnimation'); */
+
+            let boxes = document.querySelectorAll('.box');
+
+            //boxes[0] boxes[1] boxes[2]
+            for(let i=0; i<boxes.length; i++){
+                boxes[i].classList.add('stopAnimation');
+            }
+
+
+        })
+
     </script>
 </body>
 

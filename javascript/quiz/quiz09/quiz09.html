@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .black {
+            color: black;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .backgray {
+            background-color: gray;
+        }
+
+        .backwhite {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+    <button onclick="changeMain2()">main 배경색 white로 다시 변경</button>
+    <button onclick="rechangeP1()">p1 글자색을 다시 black로 변경</button>
+
+
+    <script>
+        /* 코드 작성 부분 */
+
+        function changeMain() {
+            document.getElementById('main').classList.remove('backwhite');
+            document.getElementById('main').classList.toggle('backgray');
+        }
+
+        function changeMain2() {
+            document.getElementById('main').classList.remove('backgray');
+            document.getElementById('main').classList.add('backwhite')
+        }
+
+        const changeP1 = function () {
+            document.getElementById('p1').classList.toggle('red');
+        }
+        const texts = ["p2 텍스트", "p2 하나", "p2 둘", "p2 셋", "p2 넷"];
+        let index = 0;
+
+        function changeP2() {
+            index = (index + 1) % texts.length;
+            p2.innerText = texts[index];
+        }//foreach로 풀었다가 모듈로연산 공부했음
+
+        const rechangeP1 = function () {
+            document.getElementById('p1').classList.remove("red");
+            document.getElementById('p1').classList.add('black');
+        }
+
+    </script>
+</body>
+
+</html>

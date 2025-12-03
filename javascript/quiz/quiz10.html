@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<form id="loginForm">
+    <input type="text" id="loginId" placeholder="아이디"><br>
+    <input type="password" id="loginPw" placeholder="비밀번호"><br>
+    <button id="btnLogin">로그인 시도</button><br>
+</form>
+
+<script>
+    const loginId = document.getElementById("loginId");
+    const loginPw = document.getElementById("loginPw");
+    const btnLogin = document.getElementById("btnLogin");
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function(e) {
+        e.preventDefault(); 
+        tryLogin();
+    });
+
+    loginId.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            e.preventDefault(); 
+            loginPw.focus();
+        }
+    });
+
+    loginPw.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            e.preventDefault(); 
+            tryLogin();
+        }
+    });
+
+    function tryLogin() {
+        const idValue = loginId.value.trim();
+        const pwValue = loginPw.value.trim();
+
+        if (idValue === "") {
+            alert("아이디를 입력하세요.");
+            loginId.focus();
+            return;
+        }
+
+        if (pwValue === "") {
+            alert("비밀번호를 입력하세요.");
+            loginPw.focus();
+            return;
+        }
+
+        alert("로그인 성공!");
+
+        loginId.value = "";
+        loginPw.value = "";
+
+        loginId.focus();
+    }
+</script>
+
+</body>
+</html>

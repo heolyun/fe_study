@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>달식당 <span onclick="increaseCnt()">좋아요❤</span> <span id="cnt">0</span> </p>
+
+    <script>
+        const cnt = document.getElementById('cnt');
+
+        let count = 0;
+        function increaseCnt(){
+            //Number()  String()
+            //cnt.textContent = Number(cnt.textContent) + 1 ;
+            count = count + 1;
+            cnt.textContent = count;
+        }
+
+    </script>
+</body>
+</html>
